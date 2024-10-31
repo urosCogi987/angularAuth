@@ -1,0 +1,37 @@
+<div class="example-container">
+  <form [formGroup]="regiserUserForm">
+    <mat-form-field>
+      <mat-label> Username </mat-label>
+      <input
+        matInput
+        placeholder="username"
+        FormControlName="username"
+        required
+      />
+      @if (regiserUserForm.invalid) {
+      <mat-error>Username is required</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label> Name </mat-label>
+      <input matInput placeholder="name" FormControlName="name" required />
+      @if (regiserUserForm.invalid) {
+      <mat-error>Name is required</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label> Surname </mat-label>
+      <input
+        matInput
+        placeholder="surname"
+        FormControlName="surname"
+        required
+      />
+      @if (regiserUserForm.invalid) {
+      <mat-error>Surname is required</mat-error>
+      }
+    </mat-form-field>
+  </form>
+</div>
